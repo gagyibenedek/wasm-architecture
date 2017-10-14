@@ -3,17 +3,19 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Slide,
   Text,
   S,
-  Link
+  Link,
+  Image,
+  BlockQuote,
+  Quote,
+  Cite,
+  CodePane
 } from "spectacle";
 
 // Import image preloader util
@@ -26,10 +28,7 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  wasmLogo: require("../assets/WebAssembly_Logo.png")
 };
 
 preloader(images);
@@ -60,7 +59,7 @@ export default class Presentation extends React.Component {
           WebAssembly
         </Heading>
         <Text margin="10px 0 0" textColor="regular" size={1} fit bold>
-          Taking a look behind the hype
+          It's not all about the performance
         </Text>
         <Text size={5} textAlign="center" style={bottomRight}>
           <S type="" style={{ color: colors.regular }}>@</S>
@@ -89,7 +88,7 @@ export default class Presentation extends React.Component {
       {/* ************************************  3  ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular">
-          <S type="" style={{ color: colors.regular }}>The first step:</S>
+          <S type="" style={{ color: colors.regular }}>A significant step:</S>
           <S type="" style={{ color: colors.highlight }}> asm</S>
           <S type="" style={{ color: colors.regular }}>.js</S>
         </Heading>
@@ -107,22 +106,66 @@ export default class Presentation extends React.Component {
         </List>
       </Slide>
       {/* ************************************  4  ************************************ */}
-      <Slide transition={["fade"]} bgColor="bg" textColor="plain">
-        <Heading size={6} textColor="regular" caps>Standard List</Heading>
-        <List>
-          <ListItem>Item 1</ListItem>
-          <ListItem>Item 2</ListItem>
-          <ListItem>Item 3</ListItem>
-          <ListItem>Item 4</ListItem>
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          <S type="" style={{ color: colors.highlight }}>Web</S>
+          <S type="" style={{ color: colors.regular }}>Assembly</S>
+        </Heading>
+        <List type="A" textColor="regular">
+          <ListItem>announced on 17 June 2015</ListItem>
+          <ListItem>open standard: developed by W3C</ListItem>
+          <ListItem>all the mayor players are behind it</ListItem>
+          <ListItem>15 March 2016: MVP is demonstrated</ListItem>
         </List>
       </Slide>
       {/* ************************************  5  ************************************ */}
-      <Slide transition={["fade"]} bgColor="bg" textColor="highlight">
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={1} textColor="regular">What is</Heading>
+        <Image display="block" height="300" src={images.wasmLogo} />
+        <Heading size={1} textColor="regular">?</Heading>
+      </Slide>
+      {/* ************************************  6  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
         <BlockQuote>
-        <Quote>Example Quote</Quote>
-        <Cite>Author</Cite>
+          <Quote textSize={75} textColor="regular">
+            WebAssembly is a way to run programming languages
+            <S type="" style={{ color: colors.highlight }}> other </S>
+            than JavaScript on web pages.
+          </Quote>
+          <Cite textSize={50} textColor="highlight">Lin Clark</Cite>
         </BlockQuote>
       </Slide>
+      {/* ************************************  7  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">Binary executable format</Heading>
+        <CodePane
+          lang="binary"
+          source={require("raw-loader!../assets/add.wasm")}
+          style={{ overflow: "auto", height: "75vh" }}
+        />
+      </Slide>
+      {/* ************************************  8  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">Text representation</Heading>
+        <CodePane
+          lang="lisp"
+          source={require("raw-loader!../assets/add.wast")}
+          style={{ overflow: "auto", height: "75vh" }}
+          textSize="2.7vh"
+        />
+      </Slide>
+      {/* ************************************  9  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">Source written in C</Heading>
+        <CodePane
+          lang="C-like"
+          source={require("raw-loader!../assets/add.c")}
+          style={{ overflow: "auto", height: "75vh" }}
+          textSize="4vh"
+        />
+      </Slide>
+
+      {/* ************************************  END  ************************************ */}
     </Deck>
     );
   }
