@@ -35,6 +35,7 @@ const images = {
   compile: require("../assets/compile.png"),
   hot: require("../assets/hot.jpg"),
   joinme: require("../assets/jm.svg"),
+  lmi: require("../assets/lmi.svg"),
   emscripten: require("../assets/emscripten.png"),
   heart: require("../assets/heart.png"),
   fast: require("../assets/fast.jpg"),
@@ -47,7 +48,8 @@ const theme = createTheme({
   bg: "#dddddd",
   regular: "#60b200",
   highlight: "#ef6a00",
-  plain: "#222222"
+  plain: "#222222",
+  white: "#fff"
 }, {
   primary: "Rubik",
   secondary: "Helvetica"
@@ -69,13 +71,15 @@ export default class Presentation extends React.Component {
           WebAssembly
         </Heading>
         <Text margin="10px 0 0" textColor="regular" size={1} fit bold>
-          It's not all about the performance
+          It's all about the performance
         </Text>
-        <Text size={5} textAlign="center" style={bottomRight}>
-          <S type="" style={{ color: colors.regular }}>@</S>
-          <S type="" style={{ color: colors.highlight }}>Benedek</S>
-          <S type="" style={{ color: colors.regular }}>Gagyi</S>
-        </Text>
+      </Slide>
+      {/* ************************************  1.5  ************************************ */}
+      <Slide transition={["zoom"]} bgColor="highlight">
+        <Image src={images.lmi} width="100%" />
+        <Heading size={2} lineHeight={1} textColor="white">
+          @BenedekGagyi
+        </Heading>
       </Slide>
       {/* ************************************  2  ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
@@ -263,17 +267,16 @@ export default class Presentation extends React.Component {
           <ListItem>abstraction</ListItem>
           <ListItem>weaker tooling</ListItem>
           <ListItem>performance</ListItem>
+          <ListItem>patent misery</ListItem>
           <ListItem>(can be) and HR nightmare</ListItem>
         </List>
       </Slide>
       {/* ************************************  17  ************************************ */}
-      <Slide transition={["fade"]} bgColor="bg">
-        <Heading size={1} textColor="highlight">
-          WaaAr
-          <S type="" style={{ color: colors.regular, position: "relative", top: "-0.8em", fontSize: "50%" }}>TM</S>
-        </Heading>
-        <Heading size={4} textColor="regular" margin="15px">
-          WebAssembly as an Architecture
+      <Slide transition={["zoom"]} bgColor="bg">
+        <Heading size={2} lineHeight={1} textColor="regular">
+         Is it
+         <S type="" style={{ color: colors.highlight }}> all </S>
+         about the performance?
         </Heading>
       </Slide>
        {/* ************************************  18  ************************************ */}
@@ -295,6 +298,18 @@ export default class Presentation extends React.Component {
             <Image src={images.heart} height="200px" />
           </Fill>
         </Layout>
+      </Slide>
+
+
+       {/* ************************************  ?  ************************************ */}
+       <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={1} textColor="highlight">
+          WaaAr
+          <S type="" style={{ color: colors.regular, position: "relative", top: "-0.8em", fontSize: "50%" }}>TM</S>
+        </Heading>
+        <Heading size={4} textColor="regular" margin="15px">
+          WebAssembly as an Architecture
+        </Heading>
       </Slide>
 
       {/* ************************************  END  ************************************ */}
