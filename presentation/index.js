@@ -74,17 +74,42 @@ export default class Presentation extends React.Component {
           It's all about the performance
         </Text>
       </Slide>
-      {/* ************************************  1.5  ************************************ */}
+      {/* ************************************  2  ************************************ */}
       <Slide transition={["zoom"]} bgColor="highlight">
         <Image src={images.lmi} width="100%" />
         <Heading size={2} lineHeight={1} textColor="white">
           @BenedekGagyi
         </Heading>
       </Slide>
-      {/* ************************************  2  ************************************ */}
+      {/* ************************************  3  ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
-          <S type="" style={{ color: colors.regular }}>JavaScript</S>
+          <S type="" style={{ color: colors.regular }}>The state of the</S>
+          <S type="" style={{ color: colors.highlight }}> web </S>
+          <S type="" style={{ color: colors.regular }}> in 2017</S>
+        </Heading>
+        <Layout>
+          <Fill>
+            <Heading size={5} textColor="white" bgColor="regular" margin="10px" padding="0 10px" lineHeight="2em">
+              JavaScript<br />Monopoly
+            </Heading>
+          </Fill>
+          <Fill>
+            <Heading size={5} textColor="white" bgColor="regular" margin="10px" padding="0 10px" lineHeight="4em">
+              HW APIs
+            </Heading>
+          </Fill>
+        </Layout>
+        <Appear>
+          <Heading size={5} textColor="white" bgColor="highlight" margin="10px" padding="0 10px" lineHeight="2em">
+            Disappointing performance
+          </Heading>
+        </Appear>
+      </Slide>
+      {/* ************************************  ?  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular" margin=" 0 0 30px">
+          <S type="" style={{ color: colors.regular }}>JS</S>
           <S type="" style={{ color: colors.highlight }}> performance:</S>
           <S type="" style={{ color: colors.regular }}> why does it suck?</S>
         </Heading>
@@ -92,11 +117,6 @@ export default class Presentation extends React.Component {
           <ListItem>simplicity above everything else</ListItem>
           <ListItem>dynamic, weakly typed</ListItem>
           <ListItem>2008: just-in-time (JIT) compiling</ListItem>
-          <ListItem>
-            <Link textColor="highlight" href="https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/">
-              For more info, check out Link Clark's work
-            </Link>
-          </ListItem>
         </List>
       </Slide>
       {/* ************************************  3  ************************************ */}
@@ -197,7 +217,7 @@ export default class Presentation extends React.Component {
           <Fill>
             <List textColor="highlight" margin={10} >
               <ListItem textSize="2rem">pushed by Mozilla</ListItem>
-              <ListItem textSize="2rem">zip / unzip</ListItem>
+              <ListItem textSize="2rem">minify, zip / unzip</ListItem>
               <ListItem textSize="2rem">parsing</ListItem>
               <ListItem textSize="2rem">warm-up time</ListItem>
             </List>
@@ -271,16 +291,8 @@ export default class Presentation extends React.Component {
           <ListItem>(can be) and HR nightmare</ListItem>
         </List>
       </Slide>
-      {/* ************************************  17  ************************************ */}
-      <Slide transition={["zoom"]} bgColor="bg">
-        <Heading size={2} lineHeight={1} textColor="regular">
-         Is it
-         <S type="" style={{ color: colors.highlight }}> all </S>
-         about the performance?
-        </Heading>
-      </Slide>
-       {/* ************************************  18  ************************************ */}
-       <Slide transition={["fade"]} bgColor="bg">
+      {/* ************************************  18  ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
         <Layout>
           <Fill>
             <Image src={images.joinme} height="200px" />
