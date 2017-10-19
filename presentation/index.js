@@ -36,10 +36,15 @@ const images = {
   hot: require("../assets/hot.jpg"),
   joinme: require("../assets/jm.svg"),
   lmi: require("../assets/lmi.svg"),
+  android: require("../assets/android.svg"),
   emscripten: require("../assets/emscripten.png"),
   heart: require("../assets/heart.png"),
+  win: require("../assets/win.png"),
+  ios: require("../assets/ios.png"),
+  html5: require("../assets/html5.png"),
   fast: require("../assets/fast.jpg"),
-  slow: require("../assets/slow.jpg")
+  slow: require("../assets/slow.jpg"),
+  mac: require("../assets/mac.gif")
 };
 
 preloader(images);
@@ -65,7 +70,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
     <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-      {/* ************************************  1  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["zoom"]} bgColor="bg">
         <Heading size={1} fit caps lineHeight={1} textColor="highlight">
           WebAssembly
@@ -74,14 +79,14 @@ export default class Presentation extends React.Component {
           It's all about the performance
         </Text>
       </Slide>
-      {/* ************************************  2  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["zoom"]} bgColor="highlight">
         <Image src={images.lmi} width="100%" />
         <Heading size={2} lineHeight={1} textColor="white">
           @BenedekGagyi
         </Heading>
       </Slide>
-      {/* ************************************  3  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
           <S type="" style={{ color: colors.regular }}>The state of the</S>
@@ -106,7 +111,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Appear>
       </Slide>
-      {/* ************************************  ?  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
           <S type="" style={{ color: colors.regular }}>JS</S>
@@ -119,7 +124,7 @@ export default class Presentation extends React.Component {
           <ListItem>2008: just-in-time (JIT) compiling</ListItem>
         </List>
       </Slide>
-      {/* ************************************  3  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
           <S type="" style={{ color: colors.regular }}>A significant step:</S>
@@ -139,7 +144,7 @@ export default class Presentation extends React.Component {
           </ListItem>
         </List>
       </Slide>
-      {/* ************************************  4  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg" margin=" 0 0 30px">
         <Heading size={4} textColor="regular">
           <S type="" style={{ color: colors.highlight }}>Web</S>
@@ -152,13 +157,13 @@ export default class Presentation extends React.Component {
           <ListItem>15 March 2016: MVP is demonstrated</ListItem>
         </List>
       </Slide>
-      {/* ************************************  5  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={1} textColor="regular">What is</Heading>
         <Image display="block" height="300" src={images.wasmLogo} />
         <Heading size={1} textColor="regular">?</Heading>
       </Slide>
-      {/* ************************************  6  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular">
           It's a
@@ -185,7 +190,7 @@ export default class Presentation extends React.Component {
           textSize="2.7vh"
         />
       </Slide>
-      {/* ************************************  8  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular">Source written in C</Heading>
         <CodePane
@@ -195,7 +200,7 @@ export default class Presentation extends React.Component {
           textSize="7vh"
         />
       </Slide>
-      {/* ************************************  9  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
           It's a compile
@@ -203,7 +208,7 @@ export default class Presentation extends React.Component {
         </Heading>
         <Image display="block" height="500" src={images.compile} />
       </Slide>
-      {/* ************************************  10  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular" margin=" 0 0 30px">
           asm.js
@@ -235,15 +240,15 @@ export default class Presentation extends React.Component {
           <ListItem textSize="2rem">can access DOM and other browser APIs</ListItem>
         </List>
       </Slide>
-      {/* ************************************  11  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg" bgImage={images.slow} align="flex-end flex-end" styleClass="noFluff">
-        <Heading size={1} textColor="plain" textAlign="right" style={{ margin: "0", padding: "0" }}>Before</Heading>
+        <Heading size={1} textColor="plain" textAlign="right" style={{ margin: "0", padding: "0" }}>asm.js</Heading>
       </Slide>
-      {/* ************************************  12  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg" bgImage={images.fast} align="flex-end flex-end">
-        <Heading size={1} textColor="plain" textAlign="right">After</Heading>
+        <Heading size={1} textColor="plain" textAlign="right">WASM</Heading>
       </Slide>
-      {/* ************************************  13  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg" margin=" 0 0 30px">
         <Heading size={4} textColor="highlight">
           <S type="" style={{ color: colors.regular }}>Speed is everything</S>
@@ -258,9 +263,10 @@ export default class Presentation extends React.Component {
           <ListItem>designed for fast parsing</ListItem>
           <ListItem>CPU features (int 64, popcount, copysign)</ListItem>
           <ListItem>predictable performance across browsers</ListItem>
+          <ListItem>manual memory management</ListItem>
         </List>
       </Slide>
-      {/* ************************************  14  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <BlockQuote>
           <Quote textSize={75} textColor="regular">
@@ -271,11 +277,11 @@ export default class Presentation extends React.Component {
           <Cite textSize={50} textColor="highlight">Lin Clark</Cite>
         </BlockQuote>
       </Slide>
-      {/* ************************************  15  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Image src={images.hot} height="90vh"/>
       </Slide>
-      {/* ************************************  16  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Heading size={4} textColor="regular">
           The
@@ -283,10 +289,9 @@ export default class Presentation extends React.Component {
           of cross-platform web development
         </Heading>
         <List type="A" textColor="regular">
-          <ListItem>library vs. ecosystem</ListItem>
           <ListItem>abstraction</ListItem>
-          <ListItem>weaker tooling</ListItem>
           <ListItem>performance</ListItem>
+          <ListItem>library vs. ecosystem</ListItem>
           <ListItem>patent misery</ListItem>
           <ListItem>(can be) and HR nightmare</ListItem>
         </List>
@@ -311,9 +316,55 @@ export default class Presentation extends React.Component {
           </Fill>
         </Layout>
       </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          The evolution of
+          <S type="" style={{ color: colors.highlight }}> join.</S>
+          me
+        </Heading>
+        <Layout>
+          <Fill>
+            <Image src={images.win} height="200px" />
+          </Fill>
+          <Fill>
+            <Appear><Image src={images.mac} height="200px" /></Appear>
+          </Fill>
+        </Layout>
+        <Layout>
+          <Fill>
+            <Appear><Image src={images.android} height="200px" /></Appear>
+          </Fill>
+          <Fill>
+            <Appear><Image src={images.ios} height="200px" /></Appear>
+          </Fill>
+        </Layout>
+      </Slide>
+       {/* ************************************    ************************************ */}
+       <Slide transition={["fade"]} bgColor="bg">
+        <Layout>
+          <Fill>
+            <Image src={images.win} height="200px" />
+          </Fill>
+          <Fill>
+            <Image src={images.mac} height="200px" />
+          </Fill>
+          <Fill>
+            <Image src={images.android} height="200px" />
+          </Fill>
+          <Fill>
+            <Image src={images.ios} height="200px" />
+          </Fill>
+          <Fill>
+            <Appear><Image src={images.html5} height="200px" /></Appear>
+          </Fill>
+        </Layout>
+        <Heading size={4} textColor="white" bgColor="regular" margin="10px" padding="0 10px" lineHeight="2em">
+          COMMON
+        </Heading>
+      </Slide>
 
-
-       {/* ************************************  ?  ************************************ */}
+       {/* ************************************    ************************************ */}
        <Slide transition={["fade"]} bgColor="bg">
         <Heading size={1} textColor="highlight">
           WaaAr
