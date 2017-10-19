@@ -10,7 +10,6 @@ import {
   Slide,
   Text,
   S,
-  Link,
   Image,
   BlockQuote,
   Quote,
@@ -396,7 +395,7 @@ export default class Presentation extends React.Component {
         <List type="A" textColor="regular">
           <ListItem>slow compilation</ListItem>
           <ListItem>complex CI</ListItem>
-          <ListItem>high barrier of entry for developers</ListItem>
+          <ListItem>high entry barrier for developers</ListItem>
         </List>
       </Slide>
       {/* ************************************    ************************************ */}
