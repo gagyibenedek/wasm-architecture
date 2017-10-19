@@ -151,6 +151,7 @@ export default class Presentation extends React.Component {
           <S type="" style={{ color: colors.regular }}>Assembly</S>
         </Heading>
         <List type="A" textColor="regular">
+          <ListItem>WASM</ListItem>
           <ListItem>announced on 17 June 2015</ListItem>
           <ListItem>open standard: developed by W3C</ListItem>
           <ListItem>all the mayor players are behind it</ListItem>
@@ -425,7 +426,7 @@ export default class Presentation extends React.Component {
           <Fill>
             <List type="A" textColor="regular" padding="10px" margin="5px 10px">
               <ListItem>open source</ListItem>
-              <ListItem>slow development, priority features</ListItem>
+              <ListItem>slow development, democratic features</ListItem>
               <ListItem>lots of small steps</ListItem>
               <ListItem>my fix is your bug</ListItem>
             </List>
@@ -502,11 +503,11 @@ export default class Presentation extends React.Component {
           Summary
         </Heading>
         <List type="A" textColor="regular">
-          <ListItem>WebAssembly is here to stay</ListItem>
+          <ListItem>WebAssembly is here to stay...</ListItem>
+          <ListItem>...and so is JavaScript</ListItem>
           <ListItem>Emscripten is the king</ListItem>
           <ListItem>binaryen (asm2wasm)</ListItem>
-          <ListItem>out of the box solutions (webassembly, assemblyscript, turboscript)</ListItem>
-          <ListItem>JavaScript is here to stay</ListItem>
+          <ListItem>webassembly, assemblyscript, turboscript</ListItem>
         </List>
       </Slide>
       {/* ************************************    ************************************ */}
