@@ -296,7 +296,7 @@ export default class Presentation extends React.Component {
           <ListItem>(can be) and HR nightmare</ListItem>
         </List>
       </Slide>
-      {/* ************************************  18  ************************************ */}
+      {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
         <Layout>
           <Fill>
@@ -325,20 +325,32 @@ export default class Presentation extends React.Component {
         </Heading>
         <Layout>
           <Fill>
-            <Image src={images.win} height="200px" />
+            <Image src={images.win} height="130px" />
+            <Text textColor="regular">2009</Text>
           </Fill>
           <Fill>
-            <Appear><Image src={images.mac} height="200px" /></Appear>
+            <Appear><Image src={images.mac} height="130px" /></Appear>
           </Fill>
         </Layout>
         <Layout>
           <Fill>
-            <Appear><Image src={images.android} height="200px" /></Appear>
+            <Appear><Image src={images.android} height="130px" /></Appear>
           </Fill>
           <Fill>
-            <Appear><Image src={images.ios} height="200px" /></Appear>
+            <Appear>
+              <div>
+                <Image src={images.ios} height="130px" />
+                <Text textColor="regular">2012</Text>
+              </div>
+            </Appear>
           </Fill>
         </Layout>
+        <Appear>
+          <div>
+            <Image src={images.html5} height="130px" />
+            <Text textColor="regular">2015</Text>
+          </div>
+        </Appear>
       </Slide>
        {/* ************************************    ************************************ */}
        <Slide transition={["fade"]} bgColor="bg">
@@ -356,23 +368,170 @@ export default class Presentation extends React.Component {
             <Image src={images.ios} height="200px" />
           </Fill>
           <Fill>
-            <Appear><Image src={images.html5} height="200px" /></Appear>
+            <Image src={images.html5} height="200px" />
           </Fill>
         </Layout>
-        <Heading size={4} textColor="white" bgColor="regular" margin="10px" padding="0 10px" lineHeight="2em">
-          COMMON
-        </Heading>
+        <Appear>
+          <Heading size={4} textColor="white" bgColor="regular" margin="10px" padding="0 10px" lineHeight="2em">
+            COMMON
+          </Heading>
+        </Appear>
       </Slide>
-
+      {/* ************************************    ************************************ */}
+        <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={1} textColor="regular">
+          C++
+        </Heading>
+        <Appear>
+          <List type="A" textColor="regular">
+            <ListItem>write, debug and fix once</ListItem>
+            <ListItem>fluid integration of new platforms</ListItem>
+            <ListItem>the "right" amount of freedom</ListItem>
+          </List>
+        </Appear>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={1} textColor="regular">
+          C
+          <S type="" style={{ color: colors.highlight }}>--</S>
+        </Heading>
+        <List type="A" textColor="regular">
+          <ListItem>slow compilation</ListItem>
+          <ListItem>complex CI</ListItem>
+          <ListItem>high barrier of entry for developers</ListItem>
+        </List>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          How do we
+          <S type="" style={{ color: colors.highlight }}> organize</S>
+          ?
+        </Heading>
+        <Layout>
+          <Fill>
+            <Heading size={5} textColor="white" bgColor="regular" lineHeight="2em" padding="10px" margin="10px">Feature teams</Heading>
+          </Fill>
+          <Fill>
+            <Heading size={5} textColor="white" bgColor="highlight" padding="10px" margin="10px">Cross-functional<br />teams</Heading>
+          </Fill>
+        </Layout>
+        <Layout>
+          <Fill>
+            <List type="A" textColor="regular" padding="10px" margin="5px 10px">
+              <ListItem>maintainer</ListItem>
+              <ListItem>fast development, long queuing</ListItem>
+              <ListItem>ideal for big steps</ListItem>
+              <ListItem>it's easy to get left behind</ListItem>
+            </List>
+          </Fill>
+          <Fill>
+            <List type="A" textColor="regular" padding="10px" margin="5px 10px">
+              <ListItem>open source</ListItem>
+              <ListItem>slow development, priority features</ListItem>
+              <ListItem>lots of small steps</ListItem>
+              <ListItem>my fix is your bug</ListItem>
+            </List>
+          </Fill>
+        </Layout>
+        <Appear>
+          <Heading size={6} textColor="white" bgColor="highlight" padding="10px" margin="10px">Trust is key</Heading>
+        </Appear>
+        <Appear>
+          <Heading size={6} textColor="white" bgColor="highlight" padding="10px" margin="10px">Scaling is hard</Heading>
+        </Appear>
+      </Slide>
        {/* ************************************    ************************************ */}
        <Slide transition={["fade"]} bgColor="bg">
-        <Heading size={1} textColor="highlight">
-          WaaAr
-          <S type="" style={{ color: colors.regular, position: "relative", top: "-0.8em", fontSize: "50%" }}>TM</S>
+        <Heading size={4} textColor="regular">
+          How will
+          <S type="" style={{ color: colors.highlight }}> WASM </S>
+          help us?
         </Heading>
-        <Heading size={4} textColor="regular" margin="15px">
-          WebAssembly as an Architecture
+        <Layout>
+          <Fill>
+            <Heading size={5} bgColor="regular" textColor="white" lineHeight="3em" padding="10px" margin="10px">Performance</Heading>
+          </Fill>
+          <Fill>
+            <Heading size={5} bgColor="regular" textColor="white" padding="10px" margin="10px">More<br />approachable<br />languages</Heading>
+          </Fill>
+        </Layout>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          Rust
         </Heading>
+        <List type="A" textColor="regular">
+          <ListItem>
+            it's a
+            <S type="" style={{ color: colors.highlight }}> modern </S>
+            language
+          </ListItem>
+          <ListItem>friendly learning curve</ListItem>
+          <ListItem>super safe: no memory corruptions/null pointers</ListItem>
+          <ListItem>built with cross-platform in mind</ListItem>
+          <ListItem>built in unit testing support</ListItem>
+          <ListItem>great tooling (Cargo)</ListItem>
+        </List>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          AssemblyScript
+        </Heading>
+        <Appear>
+          <Heading size={1} textColor="regular">
+            DEMO
+          </Heading>
+        </Appear>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          Current state of affairs
+        </Heading>
+        <List type="A" textColor="regular">
+          <ListItem>MVP</ListItem>
+          <ListItem>Emscripten is the king</ListItem>
+          <ListItem>binaryen (asm2wasm)</ListItem>
+          <ListItem>out of the box solutions (webassembly, assemblyscript, turboscript)</ListItem>
+          <ListItem>passing non-numbers is still tricky</ListItem>
+        </List>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Heading size={4} textColor="regular">
+          Summary
+        </Heading>
+        <List type="A" textColor="regular">
+          <ListItem>WebAssembly is here to stay</ListItem>
+          <ListItem>Emscripten is the king</ListItem>
+          <ListItem>binaryen (asm2wasm)</ListItem>
+          <ListItem>out of the box solutions (webassembly, assemblyscript, turboscript)</ListItem>
+          <ListItem>JavaScript is here to stay</ListItem>
+        </List>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <BlockQuote>
+          <Quote textSize={75} textColor="highlight">
+            <S type="" style={{ color: colors.regular }}>Always bet on JavaScript</S>
+            <Appear><span> and WASM</span></Appear>
+          </Quote>
+          <Cite textSize={50} textColor="highlight">Brendan Eich</Cite>
+        </BlockQuote>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["zoom"]} bgColor="bg">
+        <Heading size={1} fit caps lineHeight={1} textColor="highlight">
+          Thank You!
+        </Heading>
+        <Text margin="10px 0 0" textColor="regular" size={1} fit bold>
+          <S type="" style={{ color: colors.highlight }}>@</S>
+          BenedekGagyi
+        </Text>
       </Slide>
 
       {/* ************************************  END  ************************************ */}
