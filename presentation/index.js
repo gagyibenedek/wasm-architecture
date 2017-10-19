@@ -252,12 +252,8 @@ export default class Presentation extends React.Component {
           <Appear><S type="">?</S></Appear>
         </Heading>
         <List type="A" textColor="regular">
-          <ListItem>
-            leverage compilers
-            <S type="" style={{ color: colors.highlight }}> twice</S>
-          </ListItem>
+          <ListItem>leverage compilers</ListItem>
           <ListItem>10-20% smaller in gzipped form</ListItem>
-          <ListItem>designed for fast parsing</ListItem>
           <ListItem>CPU features (int 64, popcount, copysign)</ListItem>
           <ListItem>predictable performance across browsers</ListItem>
           <ListItem>manual memory management</ListItem>
@@ -295,23 +291,9 @@ export default class Presentation extends React.Component {
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
-        <Layout>
-          <Fill>
-            <Image src={images.joinme} height="200px" />
-          </Fill>
-          <Fill>
-            <S type="" textSize="170px" style={{ color: colors.highlight }}>+</S>
-          </Fill>
-          <Fill>
-            <Image src={images.emscripten} height="200px" />
-          </Fill>
-          <Fill>
-            <S type="" textSize="170px" style={{ color: colors.highlight }}>=</S>
-          </Fill>
-          <Fill>
-            <Image src={images.heart} height="200px" />
-          </Fill>
-        </Layout>
+        <Heading size={1} textColor="regular">The</Heading>
+        <Image src={images.joinme} height="250px"/>
+        <Heading size={1} textColor="regular">story</Heading>
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
@@ -373,6 +355,26 @@ export default class Presentation extends React.Component {
             COMMON
           </Heading>
         </Appear>
+      </Slide>
+      {/* ************************************    ************************************ */}
+      <Slide transition={["fade"]} bgColor="bg">
+        <Layout>
+          <Fill>
+            <Image src={images.joinme} height="200px" />
+          </Fill>
+          <Fill>
+            <S type="" textSize="170px" style={{ color: colors.highlight }}>+</S>
+          </Fill>
+          <Fill>
+            <Image src={images.emscripten} height="200px" />
+          </Fill>
+          <Fill>
+            <S type="" textSize="170px" style={{ color: colors.highlight }}>=</S>
+          </Fill>
+          <Fill>
+            <Image src={images.heart} height="200px" />
+          </Fill>
+        </Layout>
       </Slide>
       {/* ************************************    ************************************ */}
         <Slide transition={["fade"]} bgColor="bg">
