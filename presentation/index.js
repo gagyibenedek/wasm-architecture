@@ -448,14 +448,9 @@ export default class Presentation extends React.Component {
           <S type="" style={{ color: colors.highlight }}> WASM </S>
           help us?
         </Heading>
-        <Layout>
-          <Fill>
-            <Heading size={5} bgColor="regular" textColor="white" lineHeight="3em" padding="10px" margin="10px">Performance</Heading>
-          </Fill>
-          <Fill>
-            <Heading size={5} bgColor="regular" textColor="white" padding="10px" margin="10px">More<br />approachable<br />languages</Heading>
-          </Fill>
-        </Layout>
+        <Heading size={5} bgColor="regular" textColor="white" lineHeight="1.5em" padding="10px" margin="10px">Performance</Heading>
+        <Heading size={5} bgColor="regular" textColor="white" lineHeight="1.5em" padding="10px" margin="10px">No compromises</Heading>
+        <Heading size={5} bgColor="regular" textColor="white" lineHeight="1.5em" padding="10px" margin="10px">More approachable languages</Heading>
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
