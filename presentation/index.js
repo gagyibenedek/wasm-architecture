@@ -120,6 +120,7 @@ export default class Presentation extends React.Component {
         <List type="A" textColor="regular">
           <ListItem>simplicity above everything else</ListItem>
           <ListItem>dynamic, weakly typed</ListItem>
+          <ListItem>garbage collector</ListItem>
           <ListItem>2008: just-in-time (JIT) compiling</ListItem>
         </List>
       </Slide>
