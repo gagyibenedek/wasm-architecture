@@ -215,9 +215,7 @@ export default class Presentation extends React.Component {
           <S type="" style={{ color: colors.highlight }}> vs. </S>
           WebAssembly
         </Heading>
-        <List textColor="plain" margin={10} textAlign="center">
-          <ListItem textSize="2rem">equivalent (for now, to support polyfilling)</ListItem>
-        </List>
+        <Text textSize="2rem" bgColor="regular" textColor="white" padding="5px">equivalent (for now, to support polyfilling)</Text>
         <Layout>
           <Fill>
             <List textColor="highlight" margin={10} >
@@ -236,9 +234,7 @@ export default class Presentation extends React.Component {
             </List>
           </Fill>
         </Layout>
-        <List textColor="plain" margin={10} textAlign="center">
-          <ListItem textSize="2rem">can access DOM and other browser APIs</ListItem>
-        </List>
+        <Text textSize="2rem" bgColor="regular" textColor="white" padding="5px">can access DOM and other browser APIs</Text>
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg" bgImage={images.slow} align="flex-end flex-end" styleClass="noFluff">
@@ -279,7 +275,7 @@ export default class Presentation extends React.Component {
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
-        <Image src={images.hot} height="90vh"/>
+        <Image src={images.hot} height="80vh"/>
       </Slide>
       {/* ************************************    ************************************ */}
       <Slide transition={["fade"]} bgColor="bg">
